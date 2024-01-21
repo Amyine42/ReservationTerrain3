@@ -1072,13 +1072,24 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.15",
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.15"
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.15",
+          "Models": "1.0.0"
         },
         "compile": {
           "bin/placeholder/DAL.dll": {}
         },
         "runtime": {
           "bin/placeholder/DAL.dll": {}
+        }
+      },
+      "Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Models.dll": {}
         }
       }
     }
@@ -2912,6 +2923,11 @@
       "type": "project",
       "path": "../DAL/DAL.csproj",
       "msbuildProject": "../DAL/DAL.csproj"
+    },
+    "Models/1.0.0": {
+      "type": "project",
+      "path": "../Models/Models.csproj",
+      "msbuildProject": "../Models/Models.csproj"
     }
   },
   "projectFileDependencyGroups": {

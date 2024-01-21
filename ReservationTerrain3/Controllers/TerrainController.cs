@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApplicationHamza_Amine.Controllers
+namespace ReservationTerrain3.Controllers
 {
     [Authorize]
     public class TerrainController : Controller

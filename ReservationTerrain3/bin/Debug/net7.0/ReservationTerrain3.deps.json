@@ -565,10 +565,16 @@
       "DAL/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.15",
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.15"
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.15",
+          "Models": "1.0.0"
         },
         "runtime": {
           "DAL.dll": {}
+        }
+      },
+      "Models/1.0.0": {
+        "runtime": {
+          "Models.dll": {}
         }
       }
     }
@@ -1005,6 +1011,11 @@
       "sha512": ""
     },
     "DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

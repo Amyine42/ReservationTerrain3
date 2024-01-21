@@ -77,3 +77,5 @@ C:\Users\hp\source\repos\ReservationTerrain3\ReservationTerrain3\bin\Debug\net7.
 C:\Users\hp\source\repos\ReservationTerrain3\ReservationTerrain3\bin\Debug\net7.0\DAL.dll
 C:\Users\hp\source\repos\ReservationTerrain3\ReservationTerrain3\bin\Debug\net7.0\BLL.pdb
 C:\Users\hp\source\repos\ReservationTerrain3\ReservationTerrain3\bin\Debug\net7.0\DAL.pdb
+C:\Users\hp\source\repos\ReservationTerrain3\ReservationTerrain3\bin\Debug\net7.0\Models.dll
+C:\Users\hp\source\repos\ReservationTerrain3\ReservationTerrain3\bin\Debug\net7.0\Models.pdb

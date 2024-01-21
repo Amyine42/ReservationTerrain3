@@ -1053,6 +1053,16 @@
             "rid": "win"
           }
         }
+      },
+      "Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Models.dll": {}
+        }
       }
     }
   },
@@ -2875,13 +2885,19 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Models/1.0.0": {
+      "type": "project",
+      "path": "../Models/Models.csproj",
+      "msbuildProject": "../Models/Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.EntityFrameworkCore >= 7.0.15",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.15",
-      "Microsoft.EntityFrameworkCore.Tools >= 7.0.15"
+      "Microsoft.EntityFrameworkCore.Tools >= 7.0.15",
+      "Models >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2910,7 +2926,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\hp\\source\\repos\\ReservationTerrain3\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\hp\\source\\repos\\ReservationTerrain3\\Models\\Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
