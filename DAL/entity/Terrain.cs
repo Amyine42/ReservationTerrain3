@@ -24,7 +24,9 @@ namespace DAL.entity
         public string Quartier { get; set; }
         [Required]
 
-        public double Prix { get; set; }
+        public Decimal Prix { get; set; }
+
+        public String Description { get; set; }
 
     }
 }

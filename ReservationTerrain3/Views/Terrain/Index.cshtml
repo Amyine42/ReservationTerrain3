@@ -1,0 +1,31 @@
+﻿@model List<Models.Terrain.TerrainListe>
+
+<h2>Liste des Terrains</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Description</th>
+            <th>Prix</th>
+
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var terrain in Model)
+        {
+            <tr>
+                <td>@terrain.Id</td>
+                <td>@terrain.Nom</td>
+                <td>@terrain.Description</td>
+                <td>@terrain.Prix</td>
+
+
+
+                
+            </tr>
+        }
+    </tbody>
+</table>

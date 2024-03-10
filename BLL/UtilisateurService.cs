@@ -12,6 +12,7 @@ namespace BLL
 {
     public class UtilisateurService
     {
+
         public List<UtilisateurListe> GetListUtilisateur()
         {
             UtilisateurRepos utilisateurRepos = new UtilisateurRepos();
@@ -30,10 +31,8 @@ namespace BLL
                 list.Add(obj);
             }
 
-
             return list;
         }
-
 
         public void AjouterUtilisateur(AdminCreateUtilisateur model)
         {
@@ -46,22 +45,32 @@ namespace BLL
             utilisateur.MotPasse = model.MotPasse;
 
             repos.Create(utilisateur);
-
         }
 
         public void CreationCompte(InscriptionVM model)
         {
             UtilisateurRepos repos = new UtilisateurRepos();
             Utilisateur utilisateur = new Utilisateur();
-            utilisateur.Email = model.EMail;
-            utilisateur.Tel = model.Tel;
-            utilisateur.Nom = model.Nom;
-            utilisateur.Prenom = model.Prenom;
-            utilisateur.MotPasse = model.MotDePasse1;
-
+            utilisateur.Email = model.Email;
+            utilisateur.MotPasse = model.MotPasse;
 
             repos.Create(utilisateur);
 
+        }
+        public UserSession? VerifierCompte(InscriptionVM obj)
+        {
+            UtilisateurRepos utilisateurRepos = new UtilisateurRepos();
+            var result = utilisateurRepos.GetAll()
+                        .Where(a => a.MotPasse == obj.MotPasse && a.Email == obj.Email)
+                        .FirstOrDefault();
+            if (result != null)
+            {
+                UserSession userSession = new UserSession();
+                userSession.Email = result.Email;
+                userSession.Id = result.Id;
+                return userSession;
+            }
+            return null;
         }
     }
 }

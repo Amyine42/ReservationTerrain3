@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model Models.Inscription.InscriptionVM
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -12,19 +13,21 @@
         <div class="row mt-5">
             <div class="col-md-6 offset-md-3">
                 <h2 class="text-center">Login</h2>
-                <form method="post" asp-controller="Home" asp-action="Index">
+                <form method="post" asp-controller="Login" asp-action="Index">
                     <div class="form-group">
-                        <label for="username">Username:</label>
-                        <input type="text" class="form-control" id="username" name="username" required />
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" asp-for="Email" id="email" name="email" required />
                     </div>
                     <div class="form-group">
-                        <label for="password">Password:</label>
-                        <input type="password" class="form-control" id="password" name="password" required />
+                        <label for="motPasse">Password:</label>
+                        <input type="password" class="form-control" asp-for="MotPasse" id="password" name="password" required />
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    
                     <button class="btn btn-primary btn-block">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Utilisateur" asp-action="Create">Register</a>
                     </button>
+                    @ViewData["ValidateMessage"] /// fais passer les données du controleur à la vue
                 </form>
             </div>
         </div>

@@ -11,17 +11,17 @@ namespace DAL
 {
     public class MyDbContext : DbContext
     {
-        public MyDbContext()
-        {
-        }
-
-        public MyDbContext(DbContextOptions options) : base(options)
-        {
-        }
+        
 
         public DbSet<Terrain> Terrains { get; set; }
         public DbSet<Emprunt> Emprunts { get; set; }
         public DbSet<Utilisateur> Utilisateurs { get; set; }
+        protected override void OnConfiguring
+            (DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer
+                (@"Data Source=LAPTOP-IOH24J79\SQLEXPRESS;Initial Catalog=ResTerrainDb;Trusted_Connection=True;MultipleActiveResultSets=True;TrustServerCertificate=True");
+        }
 
     }
 }

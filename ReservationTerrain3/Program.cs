@@ -1,4 +1,6 @@
+using BLL;
 using DAL;
+using DAL.repos;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,11 +19,11 @@ namespace ReservationTerrain3
         CookieAuthenticationDefaults.AuthenticationScheme)
         .AddCookie(option => {
         option.LoginPath = "/Login/Index";
-        option.ExpireTimeSpan = TimeSpan.FromMinutes(10);
+        option.ExpireTimeSpan = TimeSpan.FromDays(1);
     });
 
-            builder.Services.AddDbContext<MyDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("myConnectionString")));
-
+            
+            
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
